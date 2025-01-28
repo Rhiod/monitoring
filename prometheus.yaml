@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: prometheus
-  namespace: monitoring
+  namespace: default
 spec:
   destination:
     name: in-cluster
-    namespace: monitoring
+    namespace: default
   project: infrastructure
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
